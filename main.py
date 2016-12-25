@@ -1,7 +1,7 @@
 import random
 import time
 
-'''
+
 def main():
     text = open("The_Arabian_Nights.txt").readlines()
     speed_test_selection = random.choice(text)
@@ -24,14 +24,15 @@ def main():
 
     assessment = input()
     if assessment == speed_test_selection:
-        print("Congratulations!)
+        print("Congratulations!")
     else:
         print("Learn to type!")
 
 
 main()
-'''
 
+
+'''
 a = "Mary had a little lamb"
 
 def test():
@@ -42,3 +43,4 @@ def test():
         print("Incorrect")
 
 test()
+'''
