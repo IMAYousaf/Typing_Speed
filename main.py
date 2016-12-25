@@ -29,13 +29,21 @@ def main():
 
     if assessment == speed_test_selection:
         print("Congratulations!")
-        print(str(end-begin) + "seconds have elapsed. You are so slow!")
-        #print("You type as a speed of " + str((WORDS/((end-begin)/60))) + " words per minute."
     else:
         print("Incorrect! Learn to type!")
-        print(str(end-begin) + " seconds have elapsed. You are so slow!")
-        #print("You type as a speed of " + str((WORDS/((end-begin)/60))) + " words per minute."
 
+
+    print(str(end-begin) + "seconds have elapsed. You are so slow!")
+    #print("You type as a speed of " + str((WORDS/((end-begin)/60))) + " words per minute."
+
+'''
+    for char in assessment:
+        if assessment[1] != speed_test_selection[1]:
+            mistake += 1
+            return
+
+    print(str(mistake))
+'''
 
 main()
 
@@ -44,7 +52,7 @@ main()
 import random
 
 text = open("file.txt").readlines()
-selection = random.choice(text)
+selection = random.choice(text).strip
 
 def main():
     assessment = input()
@@ -52,6 +60,10 @@ def main():
         print("Correct")
     else:
         print("Incorrect")
+    for char in assessment:
+        if assessment[i] != selection[i]:
+            error += 1
+    print(error)
 
 main()
 '''
