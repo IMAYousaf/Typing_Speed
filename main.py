@@ -36,6 +36,7 @@ def main():
     print(str(end-begin) + "seconds have elapsed. You are so slow!")
     #print("You type as a speed of " + str((WORDS/((end-begin)/60))) + " words per minute."
 
+#setting up accuracy test
 '''
     for char in assessment:
         if assessment[1] != speed_test_selection[1]:
@@ -43,6 +44,14 @@ def main():
             return
 
     print(str(mistake))
+'''
+
+#setting up WPM
+'''
+    words = assessment.split()
+
+
+
 '''
 
 main()
@@ -64,6 +73,7 @@ def main():
         if assessment[i] != selection[i]:
             error += 1
     print(error)
+    
 
 main()
 '''
