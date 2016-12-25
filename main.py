@@ -7,11 +7,11 @@ def main():
 
     print("You will be tested based upon how fast you can type a randomly selected line from \"The Arabian Nights\"")
     continuation = input("Push ENTER to continue.")
-    if selection in {ENTER}:
-        print("This is going to be your tested passage.")
-        print("You will have a 15 second delay to read the passage, and to get ready to type.")
-        time.sleep(15)
-
+    print("You will have a 15 second delay to read the passage, and to get ready to type.")
+    continuation = input("Push ENTER to continue.")
+    print("This is going to be your tested passage:")
     print("\"" + speed_test_selection + "\"")
+    time.sleep(15)
+    print("15 Seconds have Elapsed.")
 
 main()
