@@ -4,9 +4,7 @@ import time
 
 def main():
     text = open("The_Arabian_Nights.txt").readlines()
-    speed_test_selection = random.choice(text)
-
-    correct = "\"" + speed_test_selection + "\""
+    speed_test_selection = random.choice(text).strip()
 
     print("You will be tested based upon how fast you can type a randomly selected line from \"The Arabian Nights\"")
     continuation = input("Push ENTER to continue.")
@@ -29,9 +27,9 @@ def main():
 
     end = time.time()
 
-    if assessment == correct:
+    if assessment == speed_test_selection:
         print("Congratulations!")
-        print(end-begin + "seconds have elapsed. You are so slow!")
+        print(str(end-begin) + "seconds have elapsed. You are so slow!")
         #print("You type as a speed of " + str((WORDS/((end-begin)/60))) + " words per minute."
     else:
         print("Incorrect! Learn to type!")
@@ -43,14 +41,17 @@ main()
 
 
 '''
-a = "Mary had a little lamb"
+import random
 
-def test():
-    x = input()
-    if x == a:
+text = open("file.txt").readlines()
+selection = random.choice(text)
+
+def main():
+    assessment = input()
+    if assessment == selection:
         print("Correct")
     else:
         print("Incorrect")
 
-test()
+main()
 '''
