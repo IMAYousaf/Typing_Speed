@@ -21,12 +21,18 @@ def main():
     time.sleep(1)
     print("1")
     print("Begin!")
+    begin = time.time()
 
     assessment = input()
+
+    end = time.time()
+
     if assessment == speed_test_selection:
         print("Congratulations!")
+        print(end-begin + "seconds have elapsed. You are so slow!")
     else:
         print("Learn to type!")
+        print(str(end-begin) + " seconds have elapsed. You are so slow!")
 
 
 main()
