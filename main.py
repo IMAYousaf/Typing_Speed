@@ -8,11 +8,11 @@ def main():
     word_count = len(speed_test_selection.split())
 
     print("You will be tested based upon how fast you can type a randomly selected line from \"The Arabian Nights\"")
-    continuation = input("Push ENTER to continue.")
+    continuation = raw_input("Push ENTER to continue.")
     print("You will have a 15 second delay to read the passage, and to get ready to type.")
     print("Afterwards, a timer will count down from 3 and prompt you to begin.")
     print("Your passage will be nestled between two sets of parentheses. Punctuation counts, but don't type those out!")
-    continuation = input("Push ENTER to continue.")
+    continuation = raw_input("Push ENTER to continue.")
     print("This is going to be your tested passage:")
     print("\"" + speed_test_selection + "\"")
     time.sleep(15)
@@ -24,7 +24,7 @@ def main():
     print("1")
     print("Begin!")
     begin = time.time()
-    assessment = input()
+    assessment = raw_input()
     end = time.time()
     if assessment == speed_test_selection:
         print("Congratulations!")
