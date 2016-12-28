@@ -33,7 +33,7 @@ def main():
         print("Learn to type!")
     print("Here are your performance stats:")
     print(str(end-begin) + " seconds have elapsed. You are so slow!")
-    print("You type as a speed of ", ((word_count)/((end-begin)/60)), " words per minute.")
+    print("You type as a speed of ", word_count/((end-begin)/60), " words per minute.")
 
 main()
 
