@@ -1,5 +1,6 @@
 import random
 import time
+import difflib
 
 def main():
     choice = input("Type in \"EASY\" or \"HARD\" based upon your desired difficulty level:")
@@ -27,6 +28,13 @@ def easy():
     file.write(selection)
     file.write("\n\n")
     file.write(assessment)
+    d = difflib.Differ()
+    difference = d.compare(selection.split(), assessment.split())
+    file.write("\n")
+    file.write(str(''.join(difference)))
+    s = difflib.SequenceMatcher(None, selection, assessment)
+    print("You were", s.ratio() * 100, "% correct")
+
 
 def hard():
     with open("The_Arabian_Nights.txt") as paragraphs:
@@ -49,5 +57,20 @@ def hard():
     file.write(paragraph)
     file.write("\n\n")
     file.write(assessment)
+    d = difflib.Differ()
+    difference = d.compare(paragraph.split(), assessment.split())
+    file.write("\n")
+    file.write(str(''.join(difference)))
+    s = difflib.SequenceMatcher(None, paragraph, assessment)
+    print("You were", s.ratio() * 100, "% correct")
 
 main()
+
+
+
+'''
+
+>>> s = difflib.SequenceMatcher(None, 'abc bcd efgh mono', 'abc bce efgh monp')
+>>> s.ratio()
+0.8823529411764706
+'''
