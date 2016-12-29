@@ -65,12 +65,3 @@ def hard():
     print("You were", s.ratio() * 100, "% correct")
 
 main()
-
-
-
-'''
-
->>> s = difflib.SequenceMatcher(None, 'abc bcd efgh mono', 'abc bce efgh monp')
->>> s.ratio()
-0.8823529411764706
-'''
