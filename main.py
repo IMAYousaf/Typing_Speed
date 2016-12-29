@@ -26,38 +26,17 @@ def main():
     begin = time.time()
     assessment = input()
     end = time.time()
+    elapsed = end-begin
     if assessment == speed_test_selection:
         print("Congratulations!")
     else:
         print("Incorrect!")
         print("Learn to type!")
     print("Here are your performance stats:")
-    print(str(end-begin) + " seconds have elapsed. You are so slow!")
-    print("You type as a speed of ", word_count/((end-begin)/60), " words per minute.")
+    print(elapsed, " seconds have elapsed. You are so slow!")
+    print("You type at a speed of ", 60 * word_count / elapsed, " words per minute.")
 
 main()
-
-
-'''
-import random
-
-text = open("file.txt").readlines()
-selection = random.choice(text).strip
-
-def main():
-    assessment = input()
-    if assessment == selection:
-        print("Correct")
-    else:
-        print("Incorrect")
-    for char in assessment:
-        if assessment[i] != selection[i]:
-            error += 1
-    print(error)
-
-
-main()
-'''
 
 #setting up accuracy test
 '''
@@ -67,11 +46,4 @@ main()
             return
 
     print(str(mistake))
-'''
-#setting up WPM
-'''
-    words = assessment.split()
-
-
-
 '''
