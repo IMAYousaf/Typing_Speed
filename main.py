@@ -11,9 +11,9 @@ def main():
     elif choice in {"HARD", "hard"}:
         with open("The_Arabian_Nights.txt") as paragraphs:
             text = paragraphs.read()
-            selection = text.split('\n\n')
-            selection = random.choice(selection)
-            word_count = len(selection.split())
+        selection = text.split('\n\n')
+        selection = random.choice(selection)
+        word_count = len(selection.split())
     print(selection)
     begin = time.time()
     assessment = input()
