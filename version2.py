@@ -51,10 +51,3 @@ def hard():
     file.write(assessment)
 
 main()
-
-'''
-file = open("test.txt", "w")
-file.write(paragraph)
-file.write("\n")
-file.write(assessment)
-'''
